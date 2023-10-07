@@ -1,3 +1,68 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background-color: #f0f8ff;
+}
+
+.link-underline {
+  border-bottom-width: 0;
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(#fff, #fff);
+  background-size: 0 3px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.5s ease-in-out;
+}
+
+.link-underline-black {
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(#fff, #fff);
+}
+
+.link-underline:hover {
+  background-size: 100% 3px;
+  background-position: 0 100%;
+}
+
+.custom-shape-divider-top-1696657009 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1696657009 svg {
+  position: relative;
+  display: block;
+  width: calc(129% + 1.3px);
+  height: 146px;
+}
+
+.custom-shape-divider-top-1696657009 .shape-fill {
+  fill: #f0f8ff;
+}
+
+.custom-shape-divider-bottom-1696657268 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1696657268 svg {
+  position: relative;
+  display: block;
+  width: calc(129% + 1.3px);
+  height: 146px;
+}
+
+.custom-shape-divider-bottom-1696657268 .shape-fill {
+  fill: #f0f8ff;
+}

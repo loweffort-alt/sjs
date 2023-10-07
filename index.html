@@ -14,45 +14,141 @@
     <title>Vite App</title>
   </head>
   <body>
-    <nav class="flex justify-between items-center p-2 px-4">
-      <img src="/logo.png" alt="logo_eduardo" class="w-20 aspect-auto" />
-      <ul class="flex gap-5">
-        <li>Services</li>
-        <li>Contact</li>
-        <li>About us</li>
-      </ul>
-    </nav>
-    <div class="mx-auto h-96 overflow-hidden relative">
+    <div class="mx-auto h-[32rem] overflow-hidden relative top-0">
+      <nav
+        class="absolute z-10 flex justify-between items-center p-2 px-10 w-full"
+      >
+        <img
+          src="/logo.png"
+          alt="logo_eduardo"
+          class="w-20 aspect-auto cursor-pointer"
+        />
+        <div class="flex gap-10 text-2xl font-medium text-white">
+          <a href="#" class="font-display max-w-sm text-2xl leading-tight">
+            <span
+              class="link link-underline link-underline-black drop-shadow-md"
+            >
+              Services
+            </span>
+          </a>
+          <a href="#" class="font-display max-w-sm text-2xl leading-tight">
+            <span
+              class="link link-underline link-underline-black drop-shadow-md"
+            >
+              Contact Us
+            </span>
+          </a>
+          <a href="#" class="font-display max-w-sm text-2xl leading-tight">
+            <span
+              class="link link-underline link-underline-black drop-shadow-md"
+            >
+              About Us
+            </span>
+          </a>
+        </div>
+      </nav>
       <img
         src="/hero3.jpg"
         alt="bath_background"
-        class="absolute -top-44 z-0 blur-sm saturate-50 contrast-75"
+        class="absolute z-0 -translate-y-32 saturate-50 contrast-75 drop-shadow-lg rounded-3xl"
       />
       <h1
-        class="font-title text-5xl font-bold absolute z-1 drop-shadow-lg text-white whitespace-nowrap top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2"
+        class="font-title text-5xl absolute z-10 drop-shadow-lg text-white whitespace-nowrap top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2"
       >
         ENTRETIEN MÉNAGER COMMERCIAL ET INDUSTRIEL
       </h1>
     </div>
-    <section class="w-auto m-auto bg-red-50">
-      <div
-        class="mx-auto flex border-dashed border-2 border-black items-center w-9/12"
-      >
+    <section class="m-auto">
+      <div class="mx-auto flex items-center p-20 place-content-around">
         <img
           src="/bath.jpg"
           alt="bath_background"
-          class="object-cover aspect-square w-1/2"
+          class="object-cover aspect-square w-5/12 drop-shadow-2xl rounded-lg"
         />
-        <p class="w-1/2 bg-red-50">
-          Notre mission chez SJS est simple : fournir des services de haute
-          qualité à nos précieux clients. Notre équipe va au-delà des attentes
-          pour répondre aux besoins spécifiques de chaque propriété. Grâce à une
-          communication ouverte et à un service exceptionnel, nous espérons que
-          vous trouverez ce que vous cherchez avec nos services de nettoyage et
-          d’entretien dans le respect des consignes de sécurité. Qu’il s’agisse
-          de nettoyage commercial ou industriel nous sommes les experts et notre
-          service d’entretien saura répondre à vos attentes !!!
+        <h2
+          class="text-2xl font-title w-1/2 drop-shadow-md text-center font-display"
+        >
+          Notre mission chez SJS est simple: <br />
+          <strong class="italic">
+            "Fournir des services de haute qualité à nos précieux clients"
+          </strong>
+        </h2>
+      </div>
+    </section>
+    <section class="m-auto">
+      <div
+        class="mx-auto flex justify-center p-20 bg-sky-200 place-content-around relative"
+      >
+        <div class="custom-shape-divider-top-1696657009">
+          <svg
+            data-name="Layer 1"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+              class="shape-fill"
+            ></path>
+          </svg>
+        </div>
+        <p class="text-2xl font-title drop-shadow-md text-center my-40">
+          Notre équipe va au-delà des attentes pour répondre aux besoins
+          spécifiques de chaque propriété. Grâce à une communication ouverte et
+          à un service exceptionnel, nous espérons que vous trouverez ce que
+          vous cherchez avec nos services de nettoyage et d’entretien dans le
+          respect des consignes de sécurité. Qu’il s’agisse de nettoyage
+          commercial ou industriel nous sommes les experts et notre service
+          d’entretien saura répondre à vos attentes !!!
         </p>
+        <div class="custom-shape-divider-bottom-1696657268">
+          <svg
+            data-name="Layer 1"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+              class="shape-fill"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </section>
+    <section class="m-auto">
+      <div class="mx-auto flex items-center p-20 place-content-around">
+        <div>
+          <h3 class="text-4xl font-title font-bold drop-shadow-md">
+            Contacter
+          </h3>
+          <p class="text-2xl font-title drop-shadow-md align-middle my-20">
+            N’hésitez pas à nous contacter en utilisant les coordonnées
+            ci-dessous ou utilisez le formulaire pour nous envoyer un message.
+          </p>
+        </div>
+        <form action="" class="flex flex-col gap-12 w-full pl-32 pr-0">
+          <div>
+            <input
+              class="w-full p-4 rounded-md drop-shadow-lg placeholder:text-xl placeholder:italic"
+              placeholder="Correo electrónico"
+              type="email"
+              name="email"
+              value=""
+            />
+          </div>
+          <div>
+            <textarea
+              class="w-full p-4 rounded-md drop-shadow-lg placeholder:text-xl placeholder:italic"
+              name="message"
+              placeholder="Rédigez votre message"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="bg-sky-500 w-fit p-4 rounded-md text-white font-bold m-auto drop-shadow-lg"
+          >
+            Envoyer
+          </button>
+        </form>
       </div>
     </section>
   </body>
