@@ -10,39 +10,47 @@
       href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
   <body>
-    <div class="mx-auto h-[32rem] overflow-hidden relative top-0">
+    <a
+      href="https://wa.me/51913430954?text=Bonjour%2C%20je%20voudrais%20savoir%20plus%20sur%20votre%20service%20de%20nettoyage.%20Quels%20sont%20vos%20prestations%2C%20vos%20prix%20et%20vos%20disponibilit%C3%A9s%3F%20Comment%20puis-je%20r%C3%A9server%20un%20rendez-vous%20avec%20vous%3F%20Merci%20de%20votre%20r%C3%A9ponse"
+      class="float"
+      target="_blank"
+    >
+      <i class="fa fa-whatsapp my-float"></i>
+    </a>
+    <div
+      class="mx-auto h-[40rem] relative top-0 overflow-hidden drop-shadow-md rounded-b-lg"
+    >
       <nav
-        class="absolute z-10 flex justify-between items-center p-2 px-10 w-full"
+        class="absolute z-10 flex justify-between items-center p-2 px-20 w-full"
       >
-        <img
-          src="/logo.png"
-          alt="logo_eduardo"
-          class="w-20 aspect-auto cursor-pointer"
-        />
-        <div class="flex gap-10 text-2xl font-medium text-white">
-          <a href="#" class="font-display max-w-sm text-2xl leading-tight">
+        <a href="/">
+          <img
+            src="/logo.png"
+            alt="logo_eduardo"
+            class="w-20 aspect-auto cursor-pointer invert"
+          />
+        </a>
+        <div class="flex gap-16 font-medium text-white text-xl">
+          <a href="#about" class="max-w-sm leading-tight">
             <span
               class="link link-underline link-underline-black drop-shadow-md"
             >
-              Services
+              About
             </span>
           </a>
-          <a href="#" class="font-display max-w-sm text-2xl leading-tight">
+          <a href="#contact" class="max-w-sm leading-tight">
             <span
               class="link link-underline link-underline-black drop-shadow-md"
             >
-              Contact Us
-            </span>
-          </a>
-          <a href="#" class="font-display max-w-sm text-2xl leading-tight">
-            <span
-              class="link link-underline link-underline-black drop-shadow-md"
-            >
-              About Us
+              Contact
             </span>
           </a>
         </div>
@@ -50,18 +58,21 @@
       <img
         src="/hero3.jpg"
         alt="bath_background"
-        class="absolute z-0 -translate-y-32 saturate-50 contrast-75 drop-shadow-lg rounded-3xl"
+        class="absolute z-0 -translate-y-32 brightness-50 blur-sm"
       />
-      <h1
-        class="font-title text-5xl absolute z-10 drop-shadow-lg text-white whitespace-nowrap top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2"
+      <div
+        class="text-center absolute z-10 text-white whitespace-nowrap top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2"
       >
-        ENTRETIEN MÉNAGER COMMERCIAL ET INDUSTRIEL
-      </h1>
+        <h1 class="font-title text-5xl drop-shadow-lg">
+          ENTRETIEN MÉNAGER COMMERCIAL ET INDUSTRIEL
+        </h1>
+        <p class="text-white text-xl mt-10">Montreal, Quebec</p>
+      </div>
     </div>
     <section class="m-auto">
       <div class="mx-auto flex items-center p-20 place-content-around">
         <img
-          src="/bath.jpg"
+          src="/kitchen.jpg"
           alt="bath_background"
           class="object-cover aspect-square w-5/12 drop-shadow-2xl rounded-lg"
         />
@@ -72,12 +83,20 @@
           <strong class="italic">
             "Fournir des services de haute qualité à nos précieux clients"
           </strong>
+          <br />
+          <br />
+          <span class="text-xl">
+            Nous ajustons le prix de nos services afin de vous faire bénéficier
+            de tarifs compétitifs, vous garantissant de ne pas payer plus cher
+            que les prix du marché.
+          </span>
         </h2>
       </div>
     </section>
     <section class="m-auto">
       <div
         class="mx-auto flex justify-center p-20 bg-sky-200 place-content-around relative"
+        id="about"
       >
         <div class="custom-shape-divider-top-1696657009">
           <svg
@@ -116,39 +135,65 @@
     </section>
     <section class="m-auto">
       <div class="mx-auto flex items-center p-20 place-content-around">
-        <div>
+        <div class="flex flex-col gap-7 text-center px-20">
           <h3 class="text-4xl font-title font-bold drop-shadow-md">
-            Contacter
+            Nous contacter
           </h3>
-          <p class="text-2xl font-title drop-shadow-md align-middle my-20">
+          <p class="text-xl font-title drop-shadow-md align-middle">
             N’hésitez pas à nous contacter en utilisant les coordonnées
             ci-dessous ou utilisez le formulaire pour nous envoyer un message.
           </p>
+          <div class="text-lg">
+            <p>jesolisc@hotmail.com</p>
+            <p>514-4029816</p>
+            <p>Montréal, Quebec</p>
+          </div>
+          <form action="" class="flex flex-col gap-12 w-full">
+            <div class="flex flex-col gap-5">
+              <div class="flex gap-5">
+                <input
+                  class="w-full p-4 rounded-md drop-shadow-lg placeholder:text-xl placeholder:italic border-slate-300 border"
+                  placeholder="Name"
+                  type="text"
+                  id="name"
+                  required
+                />
+                <input
+                  class="w-full p-4 rounded-md drop-shadow-lg placeholder:text-xl placeholder:italic border-slate-300 border"
+                  placeholder="Phone"
+                  type="tel"
+                  id="phone"
+                  required
+                />
+              </div>
+              <input
+                class="w-full p-4 rounded-md drop-shadow-lg placeholder:text-xl placeholder:italic border-slate-300 border"
+                placeholder="E-mail"
+                type="email"
+                id="email"
+                required
+              />
+              <textarea
+                class="w-full p-4 rounded-md drop-shadow-lg placeholder:text-xl placeholder:italic border-slate-300 border"
+                placeholder="Rédigez votre message"
+                id="message"
+                required
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="bg-sky-600 hover:bg-sky-700 w-fit p-4 rounded-md text-white font-bold m-auto drop-shadow-lg"
+            >
+              Envoyer
+            </button>
+          </form>
         </div>
-        <form action="" class="flex flex-col gap-12 w-full pl-32 pr-0">
-          <div>
-            <input
-              class="w-full p-4 rounded-md drop-shadow-lg placeholder:text-xl placeholder:italic"
-              placeholder="Correo electrónico"
-              type="email"
-              name="email"
-              value=""
-            />
-          </div>
-          <div>
-            <textarea
-              class="w-full p-4 rounded-md drop-shadow-lg placeholder:text-xl placeholder:italic"
-              name="message"
-              placeholder="Rédigez votre message"
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            class="bg-sky-500 w-fit p-4 rounded-md text-white font-bold m-auto drop-shadow-lg"
-          >
-            Envoyer
-          </button>
-        </form>
+        <img
+          src="public/contact.jpg"
+          alt="contact"
+          class="rounded-xl w-1/2"
+          id="contact"
+        />
       </div>
     </section>
   </body>
