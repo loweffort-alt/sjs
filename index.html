@@ -2,24 +2,85 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SJS | Service D'Entretien</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="author" content="Darío Alexander Farfán Navarro" />
+    <meta
+      name="description"
+      content="Notre mission chez SJS est simple: 'Fournir des services de haute qualité à nos précieux clients'"
+    />
+    <meta
+      name="your keywords"
+      content="cleaning services, cleaning, Services D' Entretien, Montreal, Quebec"
+    />
+    <meta name="robots" content="index, follow" />
+    <!--menta Social SEO-->
+    <meta
+      property="og:title"
+      content="SJS | ENTRETIEN MÉNAGER COMMERCIAL ET INDUSTRIEL"
+    />
+    <meta
+      property="og:description"
+      content='Notre mission chez SJS est simple: "Fournir des services de haute qualité à nos précieux clients"'
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1627905646269-7f034dcc5738?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="SJS | ENTRETIEN MÉNAGER COMMERCIAL ET INDUSTRIEL"
+    />
+    <meta
+      name="twitter:description"
+      content='Notre mission chez SJS est simple: "Fournir des services de haute qualité à nos précieux clients"'
+    />
+    <meta
+      name="twitter:image"
+      content="https://images.unsplash.com/photo-1627905646269-7f034dcc5738?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+    />
+    <meta name="pinterest-rich-pin" content="true" />
+    <!--favicon-->
+    <link rel="icon" type="image/svg+xml" href="/favicons/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicons/site.webmanifest" />
+    <!--fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <!--styles-->
+    <link rel="stylesheet" href="/style.css" />
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
   </head>
   <body>
     <a
-      href="https://wa.me/51913430954?text=Bonjour%2C%20je%20voudrais%20savoir%20plus%20sur%20votre%20service%20de%20nettoyage.%20Quels%20sont%20vos%20prestations%2C%20vos%20prix%20et%20vos%20disponibilit%C3%A9s%3F%20Comment%20puis-je%20r%C3%A9server%20un%20rendez-vous%20avec%20vous%3F%20Merci%20de%20votre%20r%C3%A9ponse"
+      href="https://wa.me/15144029816?text=Bonjour%2C%20je%20voudrais%20savoir%20plus%20sur%20votre%20service%20de%20nettoyage.%20Quels%20sont%20vos%20prestations%2C%20vos%20prix%20et%20vos%20disponibilit%C3%A9s%3F%20Comment%20puis-je%20r%C3%A9server%20un%20rendez-vous%20avec%20vous%3F%20Merci%20de%20votre%20r%C3%A9ponse"
       class="float"
       target="_blank"
     >
@@ -148,21 +209,25 @@
             <p>514-4029816</p>
             <p>Montréal, Quebec</p>
           </div>
-          <form action="" class="flex flex-col gap-12 w-full">
+          <form
+            action="https://formsubmit.co/jesolisc@hotmail.com"
+            method="POST"
+            class="flex flex-col gap-12 w-full"
+          >
             <div class="flex flex-col gap-5">
               <div class="flex gap-5">
                 <input
                   class="w-full p-4 rounded-md drop-shadow-lg placeholder:text-xl placeholder:italic border-slate-300 border"
                   placeholder="Name"
                   type="text"
-                  id="name"
+                  name="name"
                   required
                 />
                 <input
                   class="w-full p-4 rounded-md drop-shadow-lg placeholder:text-xl placeholder:italic border-slate-300 border"
                   placeholder="Phone"
                   type="tel"
-                  id="phone"
+                  name="phone"
                   required
                 />
               </div>
@@ -170,16 +235,18 @@
                 class="w-full p-4 rounded-md drop-shadow-lg placeholder:text-xl placeholder:italic border-slate-300 border"
                 placeholder="E-mail"
                 type="email"
-                id="email"
+                name="email"
                 required
               />
               <textarea
                 class="w-full p-4 rounded-md drop-shadow-lg placeholder:text-xl placeholder:italic border-slate-300 border"
                 placeholder="Rédigez votre message"
-                id="message"
+                name="message"
                 required
               ></textarea>
             </div>
+            <input type="hidden" name="_next" value="http://localhost:5173/" />
+            <input type="hidden" name="_captcha" value="false" />
             <button
               type="submit"
               class="bg-sky-600 hover:bg-sky-700 w-fit p-4 rounded-md text-white font-bold m-auto drop-shadow-lg"
