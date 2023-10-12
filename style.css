@@ -89,3 +89,8 @@ html {
 .my-float {
   margin-top: 16px;
 }
+
+.slider {
+  display: flex;
+  aspect-ratio: 16/9;
+}
