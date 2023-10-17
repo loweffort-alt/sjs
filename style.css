@@ -6,15 +6,12 @@ body {
   background-color: #f0f8ff;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
+/*Navbar*/
 .link-underline {
   border-bottom-width: 0;
   background-image: linear-gradient(transparent, transparent),
     linear-gradient(#fff, #fff);
-  background-size: 0 3px;
+  background-size: 0 2px;
   background-position: 0 100%;
   background-repeat: no-repeat;
   transition: background-size 0.5s ease-in-out;
@@ -26,10 +23,26 @@ html {
 }
 
 .link-underline:hover {
-  background-size: 100% 3px;
+  background-size: 100% 2px;
   background-position: 0 100%;
 }
 
+.sticking {
+  background: linear-gradient(
+    180deg,
+    rgba(240, 248, 255, 1) 0%,
+    rgba(240, 248, 255, 0) 95%
+  );
+  /*backdrop-filter: blur(1px);*/
+  /*background-color: #638596;*/
+}
+
+.sticking ._turn {
+  filter: invert(0%);
+  color: #000;
+}
+
+/*Divider SVG*/
 .custom-shape-divider-top-1696657009 {
   position: absolute;
   top: 0;
@@ -71,6 +84,8 @@ html {
   fill: #f0f8ff;
 }
 
+/*Whatsapp float button*/
+
 .float {
   position: fixed;
   width: 60px;
@@ -90,7 +105,54 @@ html {
   margin-top: 16px;
 }
 
-.slider {
-  display: flex;
-  aspect-ratio: 16/9;
+/*Animations*/
+
+.text-animation {
+  animation: translateText 1.5s 1 forwards;
+}
+
+@keyframes translateText {
+  0% {
+    opacity: 0.25;
+  }
+  100% {
+    transform: translateY(-50%);
+    opacity: 1;
+  }
+}
+
+.bg_a1 {
+  animation: 20s linear 15s infinite normal none wea;
+}
+.bg_a2 {
+  animation: 20s linear 10s infinite normal none wea;
+}
+.bg_a3 {
+  animation: 20s linear 5s infinite normal none wea;
+}
+.bg_a4 {
+  animation: 20s linear 0s infinite normal none wea;
+}
+
+@keyframes wea {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+    display: block;
+  }
+  25% {
+    opacity: 0;
+    display: hidden;
+  }
+  95% {
+    display: hidden;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    display: block;
+  }
 }

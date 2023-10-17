@@ -9,6 +9,10 @@ export default {
       grayscale: {
         30: "30%",
       },
+      aspectRatio: {
+        "4/3": "4 / 3",
+        "9/16": "9 / 16",
+      },
     },
   },
   plugins: [],

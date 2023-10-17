@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth focus:scroll-auto">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -86,88 +86,86 @@
     >
       <i class="fa fa-whatsapp my-float"></i>
     </a>
-    <div
-      class="mx-auto h-[40rem] relative top-0 overflow-hidden drop-shadow-md rounded-b-lg"
+    <nav
+      class="sticky z-10 flex justify-between items-center p-2 px-20 w-full top-0"
     >
-      <nav
-        class="absolute z-10 flex justify-between items-center p-2 px-20 w-full"
-      >
-        <a href="/">
-          <img
-            src="/logo.png"
-            alt="logo_eduardo"
-            class="w-20 aspect-auto cursor-pointer invert"
-          />
+      <a href="/">
+        <img
+          src="/logo.png"
+          alt="logo_eduardo"
+          class="w-20 aspect-auto cursor-pointer invert _turn"
+        />
+      </a>
+      <div class="flex gap-16 font-medium text-xl text-white _turn">
+        <a href="#home" class="max-w-sm leading-tight">
+          <span class="link link-underline link-underline-black drop-shadow-md">
+            Home
+          </span>
         </a>
-        <div class="flex gap-16 font-medium text-white text-xl">
-          <a href="#travail" class="max-w-sm leading-tight">
-            <span
-              class="link link-underline link-underline-black drop-shadow-md"
-            >
-              Notre Travail
-            </span>
-          </a>
-          <a href="#about" class="max-w-sm leading-tight">
-            <span
-              class="link link-underline link-underline-black drop-shadow-md"
-            >
-              About
-            </span>
-          </a>
-          <a href="#contact" class="max-w-sm leading-tight">
-            <span
-              class="link link-underline link-underline-black drop-shadow-md"
-            >
-              Contact
-            </span>
-          </a>
+        <a href="#travail" class="max-w-sm leading-tight">
+          <span class="link link-underline link-underline-black drop-shadow-md">
+            Notre Travail
+          </span>
+        </a>
+        <a href="#about" class="max-w-sm leading-tight">
+          <span class="link link-underline link-underline-black drop-shadow-md">
+            About
+          </span>
+        </a>
+        <a href="#contact" class="max-w-sm leading-tight">
+          <span class="link link-underline link-underline-black drop-shadow-md">
+            Contact
+          </span>
+        </a>
+      </div>
+    </nav>
+    <header
+      class="mx-auto drop-shadow-md rounded-b-lg h-screen scroll-mt-32 -translate-y-32"
+      id="home"
+    >
+      <section class="-translate-y-32">
+        <div class="flex snap-x overflow-x-hidden bg-black">
+          <img
+            id="slide-1"
+            src="https://images.unsplash.com/photo-1603712725038-e9334ae8f39f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
+            alt="hero"
+            class="absolute z-0 brightness-50 blur-sm bg_a1"
+          />
+          <img
+            id="slide-2"
+            src="https://images.unsplash.com/photo-1669101602108-fa5ba89507ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            alt="hero"
+            class="absolute z-0 brightness-50 blur-sm bg_a2"
+          />
+          <img
+            id="slide-3"
+            src="https://images.unsplash.com/photo-1431540015161-0bf868a2d407?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            alt="hero"
+            class="absolute z-0 brightness-50 blur-sm bg_a3"
+          />
+          <img
+            id="slide-4"
+            src="https://images.unsplash.com/photo-1624884269715-70759892cd29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            alt="hero"
+            class="absolute z-0 brightness-50 blur-sm bg_a4"
+          />
         </div>
-      </nav>
-      <section class="container">
-        <div class="slider-wrapper">
-          <div class="slider">
-            <img
-              id="slide-1"
-              src="https://images.unsplash.com/photo-1603712725038-e9334ae8f39f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
-              alt="hero"
-              class="absolute z-0 -translate-y-32 brightness-50 blur-sm"
-            />
-            <img
-              id="slide-2"
-              src="https://images.unsplash.com/photo-1669101602108-fa5ba89507ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-              alt="hero"
-              class="absolute z-0 -translate-y-32 brightness-50 blur-sm"
-            />
-            <img
-              id="slide-3"
-              src="https://images.unsplash.com/photo-1431540015161-0bf868a2d407?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-              alt="hero"
-              class="absolute z-0 -translate-y-32 brightness-50 blur-sm"
-            />
-            <img
-              id="slide-4"
-              src="https://images.unsplash.com/photo-1624884269715-70759892cd29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-              alt="hero"
-              class="absolute z-0 -translate-y-32 brightness-50 blur-sm"
-            />
-          </div>
-          <div class="slider-nav">
-            <a href="#slide-1"></a>
-            <a href="#slide-2"></a>
-            <a href="#slide-3"></a>
-            <a href="#slide-4"></a>
-          </div>
-        </div>
+        <!--<div class="slider-nav">-->
+        <!--<a href="#slide-1"></a>-->
+        <!--<a href="#slide-2"></a>-->
+        <!--<a href="#slide-3"></a>-->
+        <!--<a href="#slide-4"></a>-->
+        <!--</div>-->
       </section>
       <div
-        class="text-center absolute z-10 text-white whitespace-nowrap top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2"
+        class="text-center absolute z-10 text-white w-full top-1/2 text-animation"
       >
         <h1 class="font-title text-5xl drop-shadow-lg">
           ENTRETIEN MÉNAGER COMMERCIAL ET INDUSTRIEL
         </h1>
         <p class="text-white text-xl mt-10">Montreal, Quebec</p>
       </div>
-    </div>
+    </header>
     <section class="m-auto">
       <div class="mx-auto flex items-center p-20 place-content-around">
         <img
@@ -229,7 +227,7 @@
     </section>
     <section class="m-auto">
       <div
-        class="mx-auto flex justify-center p-20 bg-sky-200 place-content-around relative"
+        class="mx-auto flex justify-center p-20 bg-sky-200 place-content-around relative scroll-mt-32"
         id="about"
       >
         <div class="custom-shape-divider-top-1696657009">
@@ -269,7 +267,7 @@
     </section>
     <section class="m-auto">
       <div class="mx-auto flex items-center p-20 place-content-around">
-        <div class="flex flex-col gap-7 text-center px-20">
+        <div class="flex flex-col gap-7 text-center px-20 w-1/2">
           <h3 class="text-4xl font-title font-bold drop-shadow-md">
             Nous contacter
           </h3>
@@ -331,10 +329,11 @@
         <img
           src="/contact.jpg"
           alt="contact"
-          class="rounded-xl w-1/2"
+          class="rounded-xl w-1/3"
           id="contact"
         />
       </div>
     </section>
+    <script src="main.js"></script>
   </body>
 </html>
