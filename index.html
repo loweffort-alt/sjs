@@ -2,7 +2,10 @@
 <html lang="en" class="scroll-smooth focus:scroll-auto">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, target-densitydpi=device-dpi"
+    />
     <title>SJS | Service D'Entretien</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="author" content="Darío Alexander Farfán Navarro" />
@@ -87,22 +90,36 @@
       <i class="fa fa-whatsapp my-float"></i>
     </a>
     <nav
-      class="sticky z-10 flex justify-between items-center p-2 px-20 w-full top-0"
+      class="fixed z-10 flex justify-between items-center p-5 md:px-20 w-full top-0"
     >
       <a href="/">
         <img
           src="/logo.png"
           alt="logo_eduardo"
-          class="w-20 aspect-auto cursor-pointer invert _turn"
+          class="w-16 sm:w-20 aspect-auto cursor-pointer invert _turn_logo"
         />
       </a>
-      <div class="flex gap-16 font-medium text-xl text-white _turn">
+      <div id="menuToggle" class="md:block">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+          <a href="#home"><li>Home</li></a>
+          <a href="#notre-travail"><li>Notre Travail</li></a>
+          <a href="#about"><li>About</li></a>
+          <a href="#contact"><li>Contact</li></a>
+        </ul>
+      </div>
+      <div
+        class="hidden md:flex font-medium text-xl text-white _turn_text justify-evenly w-full md:w-auto md:gap-20 gap:0"
+      >
         <a href="#home" class="max-w-sm leading-tight">
           <span class="link link-underline link-underline-black drop-shadow-md">
             Home
           </span>
         </a>
-        <a href="#travail" class="max-w-sm leading-tight">
+        <a href="#notre-travail" class="max-w-sm leading-tight">
           <span class="link link-underline link-underline-black drop-shadow-md">
             Notre Travail
           </span>
@@ -119,64 +136,66 @@
         </a>
       </div>
     </nav>
-    <header
-      class="mx-auto drop-shadow-md rounded-b-lg h-screen scroll-mt-32 -translate-y-32"
-      id="home"
-    >
-      <section class="-translate-y-32">
-        <div class="flex snap-x overflow-x-hidden bg-black">
-          <img
-            id="slide-1"
-            src="https://images.unsplash.com/photo-1603712725038-e9334ae8f39f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
-            alt="hero"
-            class="absolute z-0 brightness-50 blur-sm bg_a1"
-          />
-          <img
-            id="slide-2"
-            src="https://images.unsplash.com/photo-1669101602108-fa5ba89507ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-            alt="hero"
-            class="absolute z-0 brightness-50 blur-sm bg_a2"
-          />
-          <img
-            id="slide-3"
-            src="https://images.unsplash.com/photo-1431540015161-0bf868a2d407?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-            alt="hero"
-            class="absolute z-0 brightness-50 blur-sm bg_a3"
-          />
-          <img
-            id="slide-4"
-            src="https://images.unsplash.com/photo-1624884269715-70759892cd29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-            alt="hero"
-            class="absolute z-0 brightness-50 blur-sm bg_a4"
-          />
-        </div>
+    <header class="mx-auto h-screen w-full scroll-mt-32 my-o" id="home">
+      <section
+        class="h-screen z-0 relative drop-shadow-md rounded-b-lg bg-black"
+      >
+        <img
+          id="slide-1"
+          src="https://images.unsplash.com/photo-1603712725038-e9334ae8f39f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
+          alt="hero"
+          class="absolute brightness-50 blur-sm bg_a1 object-cover h-full w-full"
+        />
+        <img
+          id="slide-2"
+          src="https://images.unsplash.com/photo-1669101602108-fa5ba89507ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+          alt="hero"
+          class="absolute brightness-50 blur-sm bg_a2 object-cover h-full w-full"
+        />
+        <img
+          id="slide-3"
+          src="https://images.unsplash.com/photo-1431540015161-0bf868a2d407?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+          alt="hero"
+          class="absolute brightness-50 blur-sm bg_a3 object-cover h-full w-full"
+        />
+        <img
+          id="slide-4"
+          src="https://images.unsplash.com/photo-1624884269715-70759892cd29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+          alt="hero"
+          class="absolute brightness-50 blur-sm bg_a4 object-cover h-full w-full"
+        />
       </section>
       <div
         class="text-center absolute z-10 text-white w-full top-1/2 text-animation"
       >
-        <h1 class="font-title text-5xl drop-shadow-lg">
+        <h1 class="font-title text-2xl md:text-5xl drop-shadow-lg">
           ENTRETIEN MÉNAGER COMMERCIAL ET INDUSTRIEL
         </h1>
-        <p class="text-white text-xl mt-10">Montreal, Quebec</p>
+        <p class="text-white md:text-xl mt-10">Montreal, Quebec</p>
       </div>
     </header>
-    <section class="m-auto p-20" id="travail">
-      <div class="mx-auto flex items-center place-content-around pb-10">
-        <h2
-          class="text-2xl font-title w-1/2 drop-shadow-md text-center font-display"
+    <section
+      class="m-auto py-16 md:py-20 px-5 md:px-20 scroll-my-32"
+      id="notre-travail"
+    >
+      <div
+        class="flex flex-col items-center place-content-around pb-10 gap-4 text-center"
+      >
+        <p
+          class="sm:text-2xl text-lg w-1/2 drop-shadow-md text-center font-display"
         >
-          Notre mission chez SJS est simple: <br />
-          <strong class="italic">
-            "Fournir des services de haute qualité à nos précieux clients"
-          </strong>
-          <br />
-          <br />
-          <span class="text-xl">
-            Nous ajustons le prix de nos services afin de vous faire bénéficier
-            de tarifs compétitifs, vous garantissant de ne pas payer plus cher
-            que les prix du marché.
-          </span>
+          Notre mission chez SJS est simple:
+        </p>
+        <h2
+          class="sm:text-3xl text-xl italic font-bold font-title w-1/2 drop-shadow-md text-center font-display"
+        >
+          "Fournir des services de haute qualité à nos précieux clients"
         </h2>
+        <span class="sm:text-xl text-lg">
+          Nous ajustons le prix de nos services afin de vous faire bénéficier de
+          tarifs compétitifs, vous garantissant de ne pas payer plus cher que
+          les prix du marché.
+        </span>
       </div>
       <div
         class="grid grid-cols-autofill gap-10 mx-auto content-center justify-center"
@@ -185,14 +204,16 @@
           <div
             class="absolute justify-center min-h-0 z-10 text-center text-white -translate-y-1/2 top-1/2 bg-[rgba(0,0,0,0.6)] w-full"
           >
-            <h3 class="text-3xl text-center font-bold py-5 tracking-widest">
+            <h3
+              class="md:text-3xl text-xl text-center font-bold md:py-5 py-2 tracking-widest"
+            >
               HOUSE
             </h3>
-            <p class="invisible opacity-0 min-h-0 absolute">
+            <p
+              class="invisible opacity-0 min-h-0 absolute text-sm md:text-lg px-2"
+            >
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis
               recusandae voluptatem doloremque dolorum vero exercitationem
-              perspiciatis velit voluptas deserunt ea! Commodi magnam vel
-              perspiciatis accusamus iusto esse, maxime earum ab?
             </p>
           </div>
           <img
@@ -205,14 +226,16 @@
           <div
             class="absolute justify-center min-h-0 z-10 text-center text-white -translate-y-1/2 top-1/2 bg-[rgba(0,0,0,0.6)] w-full"
           >
-            <h3 class="text-3xl text-center font-bold py-5 tracking-widest">
+            <h3
+              class="md:text-3xl text-xl text-center font-bold md:py-5 py-2 tracking-widest"
+            >
               OFFICE
             </h3>
-            <p class="invisible opacity-0 min-h-0 absolute">
+            <p
+              class="invisible opacity-0 min-h-0 absolute text-sm md:text-lg px-2"
+            >
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis
               recusandae voluptatem doloremque dolorum vero exercitationem
-              perspiciatis velit voluptas deserunt ea! Commodi magnam vel
-              perspiciatis accusamus iusto esse, maxime earum ab?
             </p>
           </div>
           <img
@@ -225,14 +248,16 @@
           <div
             class="absolute justify-center min-h-0 z-10 text-center text-white -translate-y-1/2 top-1/2 bg-[rgba(0,0,0,0.6)] w-full"
           >
-            <h3 class="text-3xl text-center font-bold py-5 tracking-widest">
+            <h3
+              class="md:text-3xl text-xl text-center font-bold md:py-5 py-2 tracking-widest"
+            >
               OPEN SPACES
             </h3>
-            <p class="invisible opacity-0 min-h-0 absolute">
+            <p
+              class="invisible opacity-0 min-h-0 absolute text-sm md:text-lg px-2"
+            >
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis
               recusandae voluptatem doloremque dolorum vero exercitationem
-              perspiciatis velit voluptas deserunt ea! Commodi magnam vel
-              perspiciatis accusamus iusto esse, maxime earum ab?
             </p>
           </div>
           <img
@@ -243,24 +268,14 @@
         </div>
       </div>
     </section>
-    <section class="m-auto">
+    <section class="m-auto py-20 scroll-my-32" id="about">
       <div
-        class="mx-auto flex justify-center p-20 bg-sky-200 place-content-around relative scroll-mt-32"
-        id="about"
+        class="mx-auto flex flex-col justify-center md:px-20 px-10 place-content-around relative scroll-mt-32"
       >
-        <div class="custom-shape-divider-top-1696657009">
-          <svg
-            data-name="Layer 1"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-              class="shape-fill"
-            ></path>
-          </svg>
+        <div class="separator md:text-5xl text-2xl text-center font-title">
+          About Us
         </div>
-        <p class="text-2xl font-title drop-shadow-md text-center my-20">
+        <p class="md:text-2xl drop-shadow-md text-center md:my-16 my-5">
           Notre équipe va au-delà des attentes pour répondre aux besoins
           spécifiques de chaque propriété. Grâce à une communication ouverte et
           à un service exceptionnel, nous espérons que vous trouverez ce que
@@ -269,31 +284,21 @@
           commercial ou industriel nous sommes les experts et notre service
           d’entretien saura répondre à vos attentes !!!
         </p>
-        <div class="custom-shape-divider-bottom-1696657268">
-          <svg
-            data-name="Layer 1"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-              class="shape-fill"
-            ></path>
-          </svg>
-        </div>
       </div>
     </section>
-    <section class="m-auto">
-      <div class="mx-auto flex items-center p-20 place-content-around">
-        <div class="flex flex-col gap-7 text-center px-20 w-1/2">
-          <h3 class="text-4xl font-title font-bold drop-shadow-md">
+    <section class="m-auto px-5 pb-20" id="contact">
+      <div
+        class="mx-auto flex items-center place-content-around flex-col md:flex-row"
+      >
+        <div class="flex flex-col gap-7 text-center md:w-1/2 w-full">
+          <h3 class="text-2xl md:text-4xl font-bold drop-shadow-md">
             Nous contacter
           </h3>
-          <p class="text-xl font-title drop-shadow-md align-middle">
+          <p class="md:text-xl drop-shadow-md align-middle">
             N’hésitez pas à nous contacter en utilisant les coordonnées
             ci-dessous ou utilisez le formulaire pour nous envoyer un message.
           </p>
-          <div class="text-lg">
+          <div class="md:text-lg text-sm">
             <p>jesolisc@hotmail.com</p>
             <p>514-4029816</p>
             <p>Montréal, Quebec</p>
@@ -347,8 +352,7 @@
         <img
           src="/contact.jpg"
           alt="contact"
-          class="rounded-xl w-1/3"
-          id="contact"
+          class="rounded-xl w-1/3 hidden md:block"
         />
       </div>
     </section>

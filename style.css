@@ -28,60 +28,70 @@ body {
 }
 
 .sticking {
-  background: linear-gradient(
-    180deg,
-    rgba(240, 248, 255, 1) 0%,
-    rgba(240, 248, 255, 0) 95%
-  );
-  /*backdrop-filter: blur(1px);*/
-  /*background-color: #638596;*/
+  background: #f0f8ff;
+  z-index: 99;
+  transition: all 0.5s;
 }
 
-.sticking ._turn {
+._turn_logo {
+  transition: all 0.5s;
+}
+._turn_text {
+  transition: all 0.5s;
+}
+
+.sticking ._turn_logo {
   filter: invert(0%);
+  width: 4rem;
+  transition: all 0.5s;
+}
+
+@media (max-width: 640px) {
+  .sticking {
+    background: none;
+  }
+  .sticking ._turn_logo {
+    padding: 5px;
+    border-radius: 20%;
+    background: #f0f8ff;
+  }
+}
+
+.sticking ._turn_text {
   color: #000;
+  transition: all 0.5s;
+}
+
+.sticking #menuToggle span {
+  background: black;
 }
 
 /*Divider SVG*/
-.custom-shape-divider-top-1696657009 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
+.separator {
+  font-family: "Share Tech Mono", monospace;
+  color: #000;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-.custom-shape-divider-top-1696657009 svg {
-  position: relative;
-  display: block;
-  width: calc(129% + 1.3px);
-  height: 146px;
-}
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    height: 0.1em;
+    min-width: 30vw;
+  }
 
-.custom-shape-divider-top-1696657009 .shape-fill {
-  fill: #f0f8ff;
-}
+  &::before {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), #000);
+    margin-right: 4vh;
+  }
 
-.custom-shape-divider-bottom-1696657268 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-}
-
-.custom-shape-divider-bottom-1696657268 svg {
-  position: relative;
-  display: block;
-  width: calc(129% + 1.3px);
-  height: 146px;
-}
-
-.custom-shape-divider-bottom-1696657268 .shape-fill {
-  fill: #f0f8ff;
+  &::after {
+    background: linear-gradient(to left, rgba(240, 240, 240, 0), #000);
+    margin-left: 4vh;
+  }
 }
 
 /*Whatsapp float button*/
@@ -183,4 +193,137 @@ body {
     opacity: 1;
     display: block;
   }
+}
+
+/*Menu Toggle*/
+#menuToggle {
+  display: none;
+  position: relative;
+  top: 0px;
+  right: 0px;
+
+  z-index: 1;
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  #menuToggle {
+    display: block;
+  }
+}
+
+#menuToggle a {
+  text-decoration: none;
+  color: #232323;
+
+  transition: color 0.3s ease;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+
+  cursor: pointer;
+
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: #fff;
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+
+  transition:
+    transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+  position: absolute;
+  width: 200px;
+  margin: -100px 0 0 -50px;
+  padding: 20px;
+  padding-top: 50px;
+  right: -100%;
+
+  background: #f8f8f8;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+
+  /*transform-origin: 50% 50%;*/
+  transform: translate(100%, 0);
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul {
+  transform: none;
 }
