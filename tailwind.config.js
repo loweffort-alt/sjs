@@ -13,6 +13,9 @@ export default {
         "4/3": "4 / 3",
         "9/16": "9 / 16",
       },
+      gridTemplateColumns: {
+        autofill: "repeat(auto-fill, minmax(25%, 30%))",
+      },
     },
   },
   plugins: [],

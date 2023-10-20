@@ -10,8 +10,8 @@ body {
 .link-underline {
   border-bottom-width: 0;
   background-image: linear-gradient(transparent, transparent),
-    linear-gradient(#fff, #fff);
-  background-size: 0 2px;
+    linear-gradient(#000, #fff);
+  background-size: 0 4px;
   background-position: 0 100%;
   background-repeat: no-repeat;
   transition: background-size 0.5s ease-in-out;
@@ -19,11 +19,11 @@ body {
 
 .link-underline-black {
   background-image: linear-gradient(transparent, transparent),
-    linear-gradient(#fff, #fff);
+    linear-gradient(#000, #fff);
 }
 
 .link-underline:hover {
-  background-size: 100% 2px;
+  background-size: 100% 4px;
   background-position: 0 100%;
 }
 
@@ -103,6 +103,34 @@ body {
 
 .my-float {
   margin-top: 16px;
+}
+
+/*Transitions*/
+._service {
+  filter: none;
+  cursor: pointer;
+}
+
+._service > div {
+  transition: all ease-in-out 0.5s;
+}
+
+._service > div > .weon {
+  transition: all linear 0.25s;
+}
+
+._service:hover > div {
+  min-height: 100%;
+  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: all ease-in-out 0.5s;
+}
+
+._service:hover > div > p {
+  visibility: visible;
+  opacity: 1;
+  min-height: 50%;
+  transition: all 0.5s linear 0.25s;
 }
 
 /*Animations*/
